@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayalvizhi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#050914,#0a0f1c,#02050c);
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* LOADER */
+#loader{
+  position:fixed;
+  width:100%;height:100vh;
+  background:#02050c;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  z-index:9999;
+  transition:.6s;
+}
+.spinner{
+  width:55px;height:55px;
+  border:4px solid rgba(255,255,255,0.1);
+  border-top:4px solid #00e5ff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{100%{transform:rotate(360deg);}}
+.loader-hide{opacity:0;visibility:hidden;}
+
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 25px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;
+}
+nav h2{
+  background:linear-gradient(45deg,#00e5ff,#00ffa6);
+  -webkit-background-clip:text;color:transparent;
+}
+nav a{color:white;text-decoration:none;margin-left:12px;font-size:14px;}
+nav a:hover{color:#00e5ff;}
+
+.hero{
+  height:85vh;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;
+}
+.hero img{
+  width:130px;height:130px;border-radius:50%;
+  border:3px solid #00e5ff;margin-bottom:12px;
+}
+.hero h1{
+  font-size:36px;
+  background:linear-gradient(45deg,#00e5ff,#00ffa6);
+  -webkit-background-clip:text;color:transparent;
+}
+
+section{padding:40px 15px;text-align:center;}
+
+.hidden{opacity:0;transform:translateY(60px);transition:1s;}
+.show{opacity:1;transform:translateY(0);}
+
+.title{font-size:26px;margin-bottom:15px;color:#00e5ff;}
+
+.card{
+  background:rgba(17,24,43,0.85);
+  border:1px solid rgba(0,229,255,0.2);
+  padding:18px;margin:10px auto;
+  width:90%;max-width:700px;
+  border-radius:14px;
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 20px rgba(0,229,255,0.35);
+}
+
+.tag{
+  display:inline-block;
+  background:#00e5ff;color:#000;
+  padding:6px 12px;margin:3px;
+  border-radius:18px;font-size:12px;font-weight:600;
+}
+
+.btn{
+  display:inline-block;margin-top:10px;
+  padding:10px 20px;
+  background:#00e5ff;color:#000;
+  border-radius:22px;text-decoration:none;
+  font-weight:600;
+}
+
+footer{padding:14px;font-size:12px;opacity:.7;}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <h2 style="margin-top:10px;color:#00e5ff;">Kayalvizhi</h2>
+</div>
+
+<nav>
+  <h2>Kayalvizhi</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Project</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <img src="1752588878990.jpg">
+  <h1>Kayalvizhi B</h1>
+  <p>BSc IT • Frontend Developer</p>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="hidden">
+  <h2 class="title">About Me</h2>
+  <div class="card">
+
+    I am <b>Kayalvizhi</b>, a passionate <b>BSc Information Technology</b> student with strong interest in 
+    <b>Web Development</b> and creative UI design. I enjoy building modern, responsive and 
+    user-friendly websites using HTML, CSS and JavaScript. <br><br>
+
+    I am a quick learner, hardworking and always eager to explore new technologies. 
+    I have developed a project called <b>Digital Apparel System</b> and also created my own portfolio website. <br><br>
+
+    I am currently looking for an opportunity as a 
+    <b>Frontend / Web Developer</b> where I can enhance my skills and contribute to real-world applications.
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+  <h2 class="title">Skills</h2>
+  <div class="card">
+
+    <h3>Programming</h3>
+    
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+
+    <br><br>
+
+    <h3>Tools</h3>
+    <span class="tag">VS Code</span>
+    <span class="tag">Canva</span>
+
+    <br><br>
+
+    <h3>Microsoft Office</h3>
+    <span class="tag">Excel</span>
+    <span class="tag">Word</span>
+    <span class="tag">PowerPoint</span>
+
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="projects" class="hidden">
+  <h2 class="title">Project</h2>
+
+  <div class="card">
+    <h3>Digital Apparel System</h3>
+    <p>A web-based system to manage apparel workflow digitally.</p>
+    <a href="https://kayalvizhiboopathi06-create.github.io/digital.com/" target="_blank" class="btn">🔗 View Live Project</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+  <h2 class="title">Contact</h2>
+  <div class="card">
+
+    📧 <a href="mailto:kayalvizhiboopathi06@gmail.com?subject=Contact%20from%20Portfolio"
+    style="color:#00e5ff;text-decoration:none;">
+    kayalvizhiboopathi06@gmail.com</a>
+
+    <br><br>
+
+    📱 <a href="https://wa.me/917824935361" target="_blank"
+    style="color:#00e5ff;text-decoration:none;">
+    7824935361 (WhatsApp)</a>
+
+    <br><br>
+
+    <a href="kayalvizhiresume.pdf" download class="btn">Download Resume</a>
+
+  </div>
+</section>
+
+<footer>© 2026 Kayalvizhi • Portfolio</footer>
+
+<script>
+/* SCROLL ANIMATION */
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show");});
+});
+document.querySelectorAll(".hidden").forEach(el=>observer.observe(el));
+
+/* LOADER */
+window.addEventListener("load",()=>{
+setTimeout(()=>{document.getElementById("loader").classList.add("loader-hide");},900);
+});
+</script>
+
+</body>
+</html>
